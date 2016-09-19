@@ -9,8 +9,8 @@ import java.util.HashMap;
  * https://leetcode.com/problems/minimum-window-substring/
  *
  * 1. Maintain a window starting from the first index of String s, find the first end till all letters in t are included in s.
- * 2. Try to move the start index as right as possible to minimize the window
- * 3. Move the window from left to right
+ * 2. Try to move the start index as right as possible to minimize the window.
+ * 3. Move the window from left to right.
  */
 
 public class MinimumWindowSubstring {
