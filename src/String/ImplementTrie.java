@@ -1,7 +1,6 @@
 package String;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 /**
  * Created by lyujiazhang on 9/19/16.
