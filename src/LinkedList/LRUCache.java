@@ -78,7 +78,7 @@ public class LRUCache {
         return node.value;
     }
 
-    private Node remove(Node node) {
+    private void remove(Node node) {
         map.remove(node.key);
         // if only one node
         if (head == tail) {
@@ -98,10 +98,9 @@ public class LRUCache {
             node.next.prev = node.prev;
         }
         node.prev = node.next = null;
-        return node;
     }
 
-    private Node append(Node node) {
+    private void append(Node node) {
         map.put(node.key, node);
         if (head == null) {
             head = tail = node;
@@ -111,6 +110,5 @@ public class LRUCache {
             head = node;
             node.prev = null;
         }
-        return node;
     }
 }
