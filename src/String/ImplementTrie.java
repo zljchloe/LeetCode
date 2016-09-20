@@ -16,7 +16,6 @@ import java.util.HashMap;
  *
  * 3. StartWith: Same with search, without the step of checking whether the last character's isLeaf field.
  */
-
 public class ImplementTrie {
     static class TrieNode {
         char c;

@@ -12,7 +12,6 @@ import java.util.HashMap;
  * 2. Try to move the start index as right as possible to minimize the window.
  * 3. Move the window from left to right.
  */
-
 public class MinimumWindowSubstring {
     public String minWindow(String s, String t) {
         HashMap<Character, Integer> map = new HashMap<>();
