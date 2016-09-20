@@ -11,7 +11,6 @@ package LinkedList;
  * 1. Add two numbers accordingly, maintain a carry number to determine whether need to add 1 on the next bit.
  * 2. Don't forget to add the extra node (1) if the carry number is 1 when reached the end of list.
  */
-
 public class AddTwoNumbers {
 
     public static class ListNode {
