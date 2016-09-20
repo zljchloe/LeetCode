@@ -18,7 +18,6 @@ import java.util.Map;
  * 5. Set(key, value): if Node<K, V> already exists, move it to the head;
  *    Otherwise check the size of the map, if less than limit, create new node and append it to the head, if not, delete the tail before that.
  */
-
 public class LRUCache {
     static class Node {
         int key;
