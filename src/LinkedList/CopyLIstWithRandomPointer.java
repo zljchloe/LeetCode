@@ -23,7 +23,6 @@ import java.util.HashMap;
  *    The original's random node's next node is the copied node's random node.
  *    Connect even indexed nodes to return a new list.
  */
-
 public class CopyListWithRandomPointer {
     static class RandomListNode {
         int label;
