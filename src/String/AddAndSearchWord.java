@@ -16,7 +16,6 @@ import java.util.HashMap;
  *            if is not '.', check current character and recurse to next character.
  *
  */
-
 public class AddAndSearchWord {
 
     public static class WordDictionary {
