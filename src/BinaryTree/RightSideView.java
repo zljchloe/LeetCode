@@ -69,7 +69,6 @@ public class RightSideView {
      * @return result list
      */
     public List<Integer> rightSideViewBFS(TreeNode root) {
-        // Write your solution here.
         List<Integer> res = new ArrayList<Integer>();
         if (root == null) {
             return res;
