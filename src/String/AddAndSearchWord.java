@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 /**
  * Created by lyujiazhang on 9/19/16.
+ * https://leetcode.com/problems/add-and-search-word-data-structure-design/
  *
  * Design a data structure to add and search word.
- * https://leetcode.com/problems/add-and-search-word-data-structure-design/
  *
  * 1. AddWord: From the first index of the string, check if the current character is current node's child.
  *             If yest, go to the next index, if no, insert a new node to the children of current node and go to next index.
