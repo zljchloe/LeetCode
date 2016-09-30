@@ -1,5 +1,10 @@
 package DP;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * Created by lyujiazhang on 9/30/16.
  * https://leetcode.com/problems/unique-paths/
@@ -34,7 +39,7 @@ public class UniquePaths {
      * Followup uniquePathsII
      * https://leetcode.com/problems/unique-paths-ii/
      * Set obstacle position as 0 when filling out the matrix.
-     * @param obstacleGrid
+     * @param obstacleGrid: Input matrix with obstacles value 1
      * @return nums of paths
      */
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
@@ -62,5 +67,60 @@ public class UniquePaths {
             }
         }
         return matrix[m - 1][n - 1];
+    }
+
+    /**
+     * Followup: Find one path from top-left to bottom-right in the matrix with obstacles.
+     * Recursively checking from bottom-right to top-left.
+     * @param matrix: Input matrix with obstacles value false
+     * @param x: current point's row num
+     * @param y: current point's col num
+     * @param path: adding point from top-left to bottom-right (bottom-up recursion).
+     * @param mem: contains point with value true but the upper and left value false, which means no path passing this point
+     * @return boolean value to flag if the point can be reached
+     */
+    public boolean getPath(boolean[][] matrix, int x, int y, List<Point> path, Set<Point> mem) {
+        Point p = new Point(x,y);
+        if (x < 0 || y < 0 || mem.contains(p) || !matrix[x][y]) {
+//            System.out.println(p);
+            return false;
+        }
+        boolean isOrigin = x == 0 && y == 0;
+        if (isOrigin || getPath(matrix, x, y - 1, path, mem) || getPath(matrix, x - 1, y, path, mem)) {
+            path.add(p);
+            return true;
+        }
+        mem.add(p);
+//        System.out.println(mem);
+        return false;
+    }
+    static class Point {
+        int x;
+        int y;
+        Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+        @Override
+        public boolean equals(Object obj) {
+            if (!(obj instanceof Point)) {
+                return false;
+            }
+            Point p1 = (Point) obj;
+            return (p1.x == this.x && p1.y == this.y);
+        }
+        @Override
+        public String toString() {
+            return "(" + this.x + "," + this.y + ")";
+        }
+    }
+    // Test case
+    public static void main(String[] args) {
+        UniquePaths r = new UniquePaths();
+        boolean[][] matrix = {{true, false}, {true, true}, {true, true}};
+        List<Point> path = new ArrayList<>();
+        Set<Point> mem = new HashSet<>();
+        r.getPath(matrix, 2, 1, path, mem);
+        System.out.println(path);
     }
 }
