@@ -29,4 +29,38 @@ public class UniquePaths {
         }
         return matrix[m - 1][n - 1];
     }
+
+    /**
+     * Followup uniquePathsII
+     * https://leetcode.com/problems/unique-paths-ii/
+     * Set obstacle position as 0 when filling out the matrix.
+     * @param obstacleGrid
+     * @return nums of paths
+     */
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        int m = obstacleGrid.length;
+        int n = obstacleGrid[0].length;
+        if (obstacleGrid[0][0] == 1) {
+            return 0;
+        }
+        int[][] matrix = new int[m][n];
+        matrix[0][0] = 1;
+        for (int i = 1; i < m; i++) {
+            if (obstacleGrid[i][0] != 1)
+                matrix[i][0] = matrix[i - 1][0];
+        }
+        for (int i = 1; i < n; i++) {
+            if (obstacleGrid[0][i] != 1)
+                matrix[0][i] = matrix[0][i - 1];
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if (obstacleGrid[i][j] != 1)
+                    matrix[i][j] = matrix[i - 1][j] + matrix[i][j - 1];
+                else
+                    matrix[i][j] = 0;
+            }
+        }
+        return matrix[m - 1][n - 1];
+    }
 }
