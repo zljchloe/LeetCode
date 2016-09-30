@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 /**
  * Created by lyujiazhang on 9/14/16.
+ * https://leetcode.com/problems/minimum-window-substring/
  *
  * Given a string S and a string T, find the minimum window in S which will contain all the characters in T.
- * https://leetcode.com/problems/minimum-window-substring/
  *
  * 1. Maintain a window starting from the first index of String s, find the first end till all letters in t are included in s.
  * 2. Try to move the start index as right as possible to minimize the window.

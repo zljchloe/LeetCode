@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 /**
  * Created by lyujiazhang on 9/19/16.
+ * https://leetcode.com/problems/implement-trie-prefix-tree/
  *
  * Implement a trie with insert, search, and startsWith methods.
- * https://leetcode.com/problems/implement-trie-prefix-tree/
  *
  * 1. Insert: From the first index of the string, check if the current character is current node's child.
  *            If yest, go to the next index, if no, insert a new node to the children of current node and go to next index.

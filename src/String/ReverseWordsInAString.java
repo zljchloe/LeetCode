@@ -2,12 +2,12 @@ package String;
 
 /**
  * Created by lyujiazhang on 9/22/16.
+ * https://leetcode.com/problems/reverse-words-in-a-string/
  *
  * Given an input string, reverse the string word by word.
  * For example,
  * Given s = "the sky is blue",
  * return "blue is sky the".
- * https://leetcode.com/problems/reverse-words-in-a-string/
  *
  * 1. Remove leading and trailing spaces.
  * 2. Remove spaces between words till only one space is left.
