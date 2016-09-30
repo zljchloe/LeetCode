@@ -2,6 +2,7 @@ package Matrix;
 
 /**
  * Created by lyujiazhang on 9/30/16.
+ * https://leetcode.com/problems/spiral-matrix-ii/
  *
  * Given an integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
  * For example,
@@ -12,7 +13,6 @@ package Matrix;
  * [ 8, 9, 4 ],
  * [ 7, 6, 5 ]
  * ]
- * https://leetcode.com/problems/spiral-matrix-ii/
  *
  * 1. Recursively generate the upper row, right col, bottom row and left col.
  * 2. Helper function inputs include the num of row/col to be generated, the offset, the number to be added.

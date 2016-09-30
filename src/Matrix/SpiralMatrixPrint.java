@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Created by lyujiazhang on 9/30/16.
+ * https://leetcode.com/problems/spiral-matrix/
  *
  * Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
  * For example,
@@ -15,7 +16,6 @@ import java.util.List;
  * [ 7, 8, 9 ]
  * ]
  * You should return [1,2,3,6,9,8,7,4,5].
- * https://leetcode.com/problems/spiral-matrix/
  *
  * 1. Recursively print the upper row, right col, bottom row and left col.
  * 2. Helper function inputs include the nums of row/col to be printed, the offset.
