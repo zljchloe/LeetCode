@@ -2,11 +2,11 @@ package LinkedList;
 
 /**
  * Created by lyujiazhang on 9/19/16.
+ * https://leetcode.com/problems/add-two-numbers/
  *
  * You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
- * https://leetcode.com/problems/add-two-numbers/
  *
  * 1. Add two numbers accordingly, maintain a carry number to determine whether need to add 1 on the next bit.
  * 2. Don't forget to add the extra node (1) if the carry number is 1 when reached the end of list.

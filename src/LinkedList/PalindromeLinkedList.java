@@ -2,9 +2,9 @@ package LinkedList;
 
 /**
  * Created by lyujiazhang on 9/21/16.
+ * https://leetcode.com/problems/palindrome-linked-list/
  *
  * Given a singly linked list, determine if it is a palindrome.
- * https://leetcode.com/problems/palindrome-linked-list/
  *
  * 1. Use fast and slow pointer to find the middle of the linked list.
  * 2. Reverse the second half of the list.

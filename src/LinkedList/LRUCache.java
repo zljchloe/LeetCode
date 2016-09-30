@@ -5,11 +5,11 @@ import java.util.Map;
 
 /**
  * Created by lyujiazhang on 9/20/16.
+ * https://leetcode.com/problems/lru-cache/
  *
  * Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set.
  * get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
  * set(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
- * https://leetcode.com/problems/lru-cache/
  *
  * 1. Maintain a doubly linked for Node<K, V>, in order to easily update the location of the node.
  * 2. Maintain a HashMap<K, Node<K, V>>, in order to check whether the node already exists in the list.
