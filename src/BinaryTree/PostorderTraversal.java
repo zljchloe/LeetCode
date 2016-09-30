@@ -7,9 +7,9 @@ import java.util.List;
 
 /**
  * Created by lyujiazhang on 9/21/16.
+ * https://leetcode.com/problems/binary-tree-postorder-traversal/
  *
  * Given a binary tree, return the postorder traversal of its nodes' values.
- * https://leetcode.com/problems/binary-tree-postorder-traversal/
  *
  * 1. Maintain a stack to keep track.
  * 2. Push root's right child to stack, and then push root, and iterate through the root's left child.

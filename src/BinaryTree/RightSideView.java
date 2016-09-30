@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by lyujiazhang on 9/24/16.
+ * https://leetcode.com/problems/binary-tree-right-side-view/
  *
  * Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
  *  For example:
@@ -17,7 +18,6 @@ import java.util.List;
  *   \    \
  *   5    4       <---
  *  You should return [1, 3, 4].
- * https://leetcode.com/problems/binary-tree-right-side-view/
  *
  * 1. DFS solution: Recurse to the right child then the left child.
  *                  Print when the res.size()==layer. (This will enable printing only the right side view's children)
