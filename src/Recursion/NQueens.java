@@ -28,7 +28,6 @@ public class NQueens {
         // Base case
         if (cur.size() >= n) {
             addSolution(res, cur, n);
-            System.out.println(cur);
             return;
         }
         // Recursive call
@@ -70,5 +69,9 @@ public class NQueens {
     public static void main(String[] args) {
         NQueens nq = new NQueens();
         System.out.println(nq.solveNQueens(4));
+        /*
+        [[.Q.., ...Q, Q..., ..Q.],
+         [..Q., Q..., ...Q, .Q..]]
+         */
     }
 }
